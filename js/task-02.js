@@ -8,12 +8,17 @@ const ingredients = [
 ];
 
 const listRef = document.querySelector("#ingredients");
-console.log(listRef);
 
-for (let i = 0; i < ingredients.length; i++) {
+const arr = [];
+
+const separateIngredients = ingredients.map((item) => {
   const itemRef = document.createElement("li");
-  itemRef.textContent = ingredients[i];
-  // console.log(itemRef);
+
+  itemRef.textContent = item;
   itemRef.classList.add("item");
-  listRef.append(itemRef);
-}
+
+  arr.push(itemRef);
+});
+
+listRef.append(...arr);
+console.log(listRef);
