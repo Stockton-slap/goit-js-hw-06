@@ -22,3 +22,15 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+ #validation-input {
+   border: 3px solid #bdbdbd;
+ }
+
+ #validation-input.valid {
+   border-color: #4caf50;
+ }
+
+ #validation-input.not-valid {
+   border-color: red;
+ }
