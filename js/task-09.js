@@ -1,13 +1,14 @@
 const refs = {
-  colorRef: document.querySelector(".color"),
-  changeColorBtnRef: document.querySelector(".change-color"),
-  bodyRef: document.querySelector("body"),
+  color: document.querySelector(".color"),
+  changeColorBtn: document.querySelector(".change-color"),
+  body: document.querySelector("body"),
 };
 
-refs.changeColorBtnRef.addEventListener("click", () => {
-  refs.bodyRef.classList.add("body");
-  refs.bodyRef.style.backgroundColor = getRandomHexColor();
-  refs.colorRef.textContent = getRandomHexColor();
+refs.changeColorBtn.addEventListener("click", () => {
+  refs.body.classList.add("body");
+  const bodyRef = document.querySelector(".body");
+  refs.body.style.backgroundColor = getRandomHexColor();
+  refs.color.textContent = getRandomHexColor();
 });
 
 function getRandomHexColor() {
