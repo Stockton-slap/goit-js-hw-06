@@ -12,22 +12,20 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
 const galleryRef = document.querySelector(".gallery");
 
 for (let i = 0; i < images.length; i++) {
   const li = document.createElement("li");
+  const markup = `<img src='${images[i].url}' alt='${images[i].alt}' width = "300" height = '200'
+ />`;
 
-  li.insertAdjacentHTML(
-    "afterbegin",
-    `<img src='${images[i].url}' alt='${images[i].alt}' width = "300" height = '200'
- />`
-  );
-  // console.log(li);
+  li.insertAdjacentHTML("afterbegin", markup);
+  console.log(li);
 
   galleryRef.append(li);
 
   galleryRef.style.listStyle = "none";
   galleryRef.style.display = "flex";
   galleryRef.style.justifyContent = "space-around";
-  // console.log(galleryRef);
 }
